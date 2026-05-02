@@ -1,0 +1,42 @@
+# ClearStack
+
+> Structured web design and AI automation for NZ small businesses.
+
+ClearStack is a solo web development and AI automation studio based in Auckland, New Zealand, founded by Ben Price. We build business websites, landing pages, web applications, and AI-powered automation tools for New Zealand small businesses.
+
+## Services
+
+- **Business websites** — Custom React/Next.js websites, up to 6 pages, from $3,500 NZD
+- **Landing pages** — Single-purpose conversion pages, from $1,200 NZD
+- **Web applications** — Custom tools, portals, dashboards built with React and Next.js
+- **AI agents & automation** — Workflow automation, lead follow-up, document processing, AI-powered tools
+
+## Technology
+
+All work is built with React and Next.js. Content-managed sites use Sanity CMS. Hosting is typically on Vercel.
+
+## Location & Contact
+
+- Based in Auckland, New Zealand
+- Serves clients across New Zealand (remote-friendly)
+- Email: hello@clearstack.nz
+- Website: https://clearstack.nz
+
+## Pricing
+
+Fixed-price, scoped upfront. No hourly billing.
+
+- Landing page: from $1,200 NZD (one-off)
+- Business website: from $3,500 NZD (one-off)
+- Web app / AI tool: custom quote
+
+## Process
+
+1. Discovery call — understand goals and requirements
+2. Fixed-price proposal — clear scope, timeline, and cost
+3. Build — React/Next.js, completed layer by layer
+4. Launch & automate — deployment, handover, automation setup
+
+## About
+
+ClearStack is a boutique studio focused on doing one project at a time properly, rather than juggling many clients at once. The approach is structured and methodical — agency-quality output without agency overhead.
