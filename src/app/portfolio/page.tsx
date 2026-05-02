@@ -72,7 +72,7 @@ export default function Portfolio() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h1 className="text-4xl font-extrabold sm:text-5xl sm:tracking-tight lg:text-6xl bg-gradient-to-r from-white via-blue-100 to-white bg-clip-text text-transparent">Our Portfolio</h1>
           <p className="mt-6 text-xl text-white/80 max-w-3xl">
-            Explore our recent projects and see how we've helped businesses achieve their digital goals.
+            Explore our recent projects and see how we&apos;ve helped businesses achieve their digital goals.
           </p>
         </div>
       </div>

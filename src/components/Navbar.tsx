@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import Link from 'next/link';
 import { useTheme } from './ThemeProvider';
 import { HoverMark } from './Logo';
 
@@ -21,12 +22,12 @@ export default function Navbar() {
   return (
     <nav style={{ boxShadow: scrolled ? '0 2px 20px rgba(91,33,182,0.08)' : 'none' }}>
       <div className="nav-inner">
-        <a href="/" style={{ display: 'flex', alignItems: 'center', gap: 10, textDecoration: 'none' }}>
+        <Link href="/" style={{ display: 'flex', alignItems: 'center', gap: 10, textDecoration: 'none' }}>
           <HoverMark size={28} colors={markColors} />
           <span style={{ fontWeight: 700, fontSize: 17, letterSpacing: '-0.03em', color: dark ? '#F8F7FF' : '#0D0A1A', transition: 'color 0.3s' }}>
             ClearStack
           </span>
-        </a>
+        </Link>
         <div className="nav-links">
           <a href="#how-it-works" className="nav-link">How it works</a>
           <a href="#pricing" className="nav-link">Pricing</a>

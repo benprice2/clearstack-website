@@ -23,7 +23,7 @@ export default function About() {
             <p className="mt-4 text-lg text-white/70">
               ClearStack was founded with a simple mission: to help businesses succeed in the digital world through 
               exceptional web development and design. We believe that a great website is more than just 
-              aesthetics—it's about creating meaningful connections between businesses and their customers.
+              aesthetics—it&apos;s about creating meaningful connections between businesses and their customers.
             </p>
             <p className="mt-4 text-lg text-white/70">
               Our team of passionate developers, designers, and digital strategists work together to deliver 

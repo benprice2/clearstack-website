@@ -21,7 +21,7 @@ export default function Contact() {
           <div className="backdrop-blur-md bg-white/5 p-8 rounded-2xl border border-white/10 shadow-xl">
             <h2 className="text-3xl font-bold text-white bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">Get in Touch</h2>
             <p className="mt-4 text-lg text-white/70">
-              We'd love to hear from you. Fill out the form and we'll get back to you as soon as possible.
+              We&apos;d love to hear from you. Fill out the form and we&apos;ll get back to you as soon as possible.
             </p>
             
             <div className="mt-8 space-y-6">
