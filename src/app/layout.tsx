@@ -12,6 +12,7 @@ const figtree = Figtree({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://clearstack.co.nz"),
   title: "ClearStack | Build it right, then automate it.",
   description: "Structured web design and AI automation for NZ small businesses. Agency-quality work, without the agency overhead.",
   keywords: ["web development", "Next.js", "AI automation", "NZ small business", "Auckland web design", "ClearStack"],
@@ -19,7 +20,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "ClearStack | Build it right, then automate it.",
     description: "Structured web design and AI automation for NZ small businesses. Agency-quality work, without the agency overhead.",
-    url: "https://clearstack.nz",
+    url: "https://clearstack.co.nz",
     siteName: "ClearStack",
     images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: "ClearStack" }],
     locale: "en_NZ",

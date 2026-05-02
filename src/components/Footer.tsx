@@ -24,7 +24,7 @@ export default function Footer() {
         <div className="footer-links">
           <a href="#how-it-works" className="footer-link">How it works</a>
           <a href="#pricing" className="footer-link">Pricing</a>
-          <a href="mailto:hello@clearstack.nz" className="footer-link">hello@clearstack.nz</a>
+          <a href="mailto:hello@clearstack.co.nz" className="footer-link">hello@clearstack.co.nz</a>
         </div>
         <div className="footer-locale">
           <span>🇳🇿</span> NZ owned &amp; operated

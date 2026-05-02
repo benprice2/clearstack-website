@@ -2,14 +2,14 @@ export default function JsonLd() {
   const localBusiness = {
     '@context': 'https://schema.org',
     '@type': 'ProfessionalService',
-    '@id': 'https://clearstack.nz/#business',
+    '@id': 'https://clearstack.co.nz/#business',
     name: 'ClearStack',
     description:
       'Structured web design and AI automation for NZ small businesses. Agency-quality work, without the agency overhead.',
-    url: 'https://clearstack.nz',
-    email: 'hello@clearstack.nz',
-    logo: 'https://clearstack.nz/android-chrome-512x512.png',
-    image: 'https://clearstack.nz/og-image.jpg',
+    url: 'https://clearstack.co.nz',
+    email: 'hello@clearstack.co.nz',
+    logo: 'https://clearstack.co.nz/android-chrome-512x512.png',
+    image: 'https://clearstack.co.nz/og-image.jpg',
     foundingDate: '2025',
     founder: {
       '@type': 'Person',
@@ -80,13 +80,13 @@ export default function JsonLd() {
   const webSite = {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
-    '@id': 'https://clearstack.nz/#website',
+    '@id': 'https://clearstack.co.nz/#website',
     name: 'ClearStack',
-    url: 'https://clearstack.nz',
-    publisher: { '@id': 'https://clearstack.nz/#business' },
+    url: 'https://clearstack.co.nz',
+    publisher: { '@id': 'https://clearstack.co.nz/#business' },
     potentialAction: {
       '@type': 'SearchAction',
-      target: 'https://clearstack.nz/?s={search_term_string}',
+      target: 'https://clearstack.co.nz/?s={search_term_string}',
       'query-input': 'required name=search_term_string',
     },
   };

@@ -15,9 +15,9 @@ export default function CTA() {
           <p className="cta-sub">No commitments — just a conversation. Tell me about your project and I&apos;ll come back with a clear scope and timeline.</p>
         </div>
         <div className="cta-actions" style={{ position: 'relative', zIndex: 1 }}>
-          <a href="mailto:hello@clearstack.nz" className="cta-btn-primary">
+          <a href="mailto:hello@clearstack.co.nz" className="cta-btn-primary">
             <IsoMark size={20} colors={darkColors} />
-            Email hello@clearstack.nz
+            Email hello@clearstack.co.nz
           </a>
           <a href="#how-it-works" className="cta-btn-ghost">See how it works →</a>
         </div>
