@@ -3,7 +3,7 @@
 const plans = [
   {
     name: 'Landing page',
-    price: '1,200',
+    price: '800',
     period: 'NZD · one-off',
     desc: 'A single-purpose page, designed and built to convert. Ideal for product launches or lead gen.',
     features: [
@@ -19,7 +19,7 @@ const plans = [
   },
   {
     name: 'Business website',
-    price: '3,500',
+    price: '2,500',
     period: 'NZD · one-off',
     desc: 'A full business website that looks the part, loads fast, and is built to last.',
     features: [
@@ -28,7 +28,7 @@ const plans = [
       'CMS integration (Sanity)',
       'SEO foundations',
       'Analytics setup',
-      '30 days post-launch support',
+      '3 months post-launch changes included',
     ],
     cta: 'Most popular',
     ctaStyle: 'dark',

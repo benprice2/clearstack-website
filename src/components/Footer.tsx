@@ -19,7 +19,7 @@ export default function Footer() {
               ClearStack
             </span>
           </div>
-          <span className="footer-copy">© 2025 Clearstack Limited. Auckland, New Zealand.</span>
+          <span className="footer-copy">© 2026 Clearstack Limited. Auckland, New Zealand.</span>
         </div>
         <div className="footer-links">
           <a href="#how-it-works" className="footer-link">How it works</a>

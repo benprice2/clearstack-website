@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Figtree } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 import ThemeProvider from "@/components/ThemeProvider";
 import JsonLd from "@/components/JsonLd";
@@ -48,6 +49,13 @@ export default function RootLayout({
         <meta name="theme-color" content="#F8F7FF" />
       </head>
       <body className="antialiased overflow-x-hidden">
+        <Script src="https://www.googletagmanager.com/gtag/js?id=G-4CSHCCYT4B" strategy="afterInteractive" />
+        <Script id="gtag-init" strategy="afterInteractive">{`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-4CSHCCYT4B');
+        `}</Script>
         <JsonLd />
         <ThemeProvider>
           {children}

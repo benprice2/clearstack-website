@@ -5,7 +5,7 @@ import { useState } from 'react';
 const faqs = [
   {
     q: 'How much does a website cost in New Zealand?',
-    a: 'ClearStack offers fixed-price packages starting at $1,200 NZD for a landing page and $3,500 NZD for a full business website (up to 6 pages). Web applications and AI tools are scoped per project. All prices are quoted upfront before any work begins — no hourly surprises.',
+    a: 'ClearStack offers fixed-price packages starting at $800 NZD for a landing page and $2,500 NZD for a full business website (up to 6 pages). Web applications and AI tools are scoped per project. All prices are quoted upfront before any work begins — no hourly surprises.',
   },
   {
     q: 'How long does it take to build a website?',
@@ -20,8 +20,8 @@ const faqs = [
     a: 'Yes. While ClearStack is based in Auckland, all project work is done remotely and I work with clients across New Zealand. Discovery calls and reviews are done over video call.',
   },
   {
-    q: 'What is included in the 30-day post-launch support?',
-    a: 'After launch, I cover any bugs, content tweaks, and minor adjustments that come up as you start using the site. It&apos;s a buffer to make sure everything is working exactly as expected before we close out the project.',
+    q: 'What is included in the 3-month post-launch changes window?',
+    a: 'Every project includes a 3-month post-launch changes window at no extra cost. This covers minor adjustments — copy tweaks, image swaps, colour changes, and small layout refinements — to make sure the delivered product fully suits your needs. Structural changes, new pages, or new features outside the original scope are quoted separately.',
   },
   {
     q: 'Can you help automate parts of my business with AI?',
