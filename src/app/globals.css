@@ -1,0 +1,270 @@
+@import "tailwindcss";
+
+/* ── Brand Palette (invariant — never changes per theme) ──── */
+:root {
+  --void:          #0D0A1A;
+  --slate:         #374151;
+  --slate-mid:     #4B5563;
+  --slate-light:   #9CA3AF;
+  --brand-violet:  #5B21B6;
+  --violet-dark:   #3B0F8C;
+  --violet-mid:    #7C3AED;
+  --violet-glow:   #8B5CF6;
+  --violet-light:  #C4B8DC;
+  --mist:          #EDE9FE;
+  --offwhite:      #F8F7FF;
+  --border-light:  rgba(91, 33, 182, 0.12);
+  --border-dark:   rgba(196, 184, 220, 0.15);
+
+  /* ── Theme Role Tokens (dark default) ──────────────────── */
+
+  /* Surfaces */
+  --bg-primary:    var(--void);       /* Hero, Work, Why, Contact */
+  --bg-secondary:  var(--mist);       /* Services */
+  --bg-tertiary:   var(--mist);       /* Process */
+  --bg-card:       #1C1638;           /* Cards on primary surfaces */
+
+  /* Text on primary surfaces */
+  --heading:       var(--offwhite);
+  --body:          rgba(237,233,254,0.6);
+  --body-mid:      rgba(237,233,254,0.55);
+  --body-faint:    rgba(237,233,254,0.45);
+  --body-vfaint:   rgba(237,233,254,0.35);
+  --label:         var(--slate-light);
+
+  /* Text on secondary/tertiary surfaces (stable across themes) */
+  --heading-alt:   var(--void);
+  --body-alt:      var(--slate);
+  --label-alt:     var(--slate-mid);
+
+  /* Accents */
+  --accent:        var(--violet-glow);    /* On primary surfaces */
+  --accent-alt:    var(--brand-violet);   /* On secondary surfaces */
+  --text-brand:    var(--violet-light);   /* Branded list text */
+
+  /* Borders */
+  --divider:       rgba(196,184,220,0.15);
+  --divider-alt:   rgba(91,33,182,0.12);
+  --divider-faint: rgba(196,184,220,0.07);
+
+  /* CTA button */
+  --cta-bg:           var(--offwhite);
+  --cta-text:         var(--void);
+  --cta-hover-shadow: rgba(91,33,182,0.35);
+  --cta-tap-shadow:   rgba(91,33,182,0.2);
+
+  /* Navigation */
+  --nav-text:         var(--offwhite);
+  --nav-link:         rgba(237,233,254,0.65);
+  --nav-bg-solid:     rgba(248,247,255,0.95);
+  --nav-text-solid:   var(--void);
+  --nav-link-solid:   var(--slate-mid);
+  --nav-border-solid: rgba(91,33,182,0.12);
+
+  /* Form */
+  --input-border:     rgba(196,184,220,0.15);
+  --input-text:       var(--offwhite);
+
+  /* Dashboard card (outer chrome) */
+  --dash-shadow:    0 28px 56px rgba(0,0,0,0.6);
+  --dash-outline:   rgba(91,33,182,0.15);
+  --dash-highlight: rgba(255,255,255,0.06);
+  --dash-border:    rgba(196,184,220,0.22);
+
+  /* Browser chrome (mockups) */
+  --chrome-bg:      #0E0922;
+  --chrome-bar:     rgba(255,255,255,0.08);
+  --chrome-dot-1:   #3B1278;
+  --chrome-dot-2:   #5B21B6;
+  --chrome-dot-3:   #7C3AED;
+
+  /* Dashboard mockup interior */
+  --mock-bg:        #0D0A1A;
+  --mock-nav:       #13102A;
+  --mock-card:      #1E1840;
+  --mock-bar:       rgba(255,255,255,0.22);
+  --mock-bar-faint: rgba(255,255,255,0.10);
+  --mock-border:    rgba(196,184,220,0.14);
+  --mock-btn-fill:  rgba(91,33,182,0.65);
+  --mock-btn-border: rgba(91,33,182,0.6);
+  --mock-btn-ghost: rgba(196,184,220,0.25);
+  --mock-card-border: rgba(196,184,220,0.12);
+  --mock-icon-bg:   rgba(255,255,255,0.08);
+  --mock-gradient:  linear-gradient(135deg, #3B0F8C, #7C3AED);
+  --mock-dot:       rgba(139,92,246,0.6);
+  --mock-glow:      #8B5CF6;
+  --mock-glow-shadow: rgba(139,92,246,0.8);
+
+  /* Hero light pool */
+  --pool-inner:     rgba(139,92,246,0.18);
+  --pool-mid:       rgba(91,33,182,0.06);
+  --pool-bg-inner:  rgba(124,58,237,0.10);
+  --pool-bg-mid:    rgba(91,33,182,0.04);
+
+  /* Misc */
+  --badge-bg:       rgba(91,33,182,0.2);
+  --badge-border:   rgba(139,92,246,0.25);
+  --phase-divider:  rgba(91,33,182,0.3);
+}
+
+/* ── Light Theme ─────────────────────────────────────────── */
+[data-theme="light"] {
+  --bg-primary:    var(--offwhite);
+  --bg-secondary:  var(--mist);
+  --bg-tertiary:   var(--mist);
+  --bg-card:       rgba(91,33,182,0.04);
+
+  --heading:       var(--void);
+  --body:          var(--slate);
+  --body-mid:      var(--slate-mid);
+  --body-faint:    #6B7280;
+  --body-vfaint:   var(--slate-light);
+  --label:         var(--slate-mid);
+
+  --accent:        var(--brand-violet);
+  --accent-alt:    var(--brand-violet);
+  --text-brand:    var(--violet-mid);
+
+  --divider:       rgba(91,33,182,0.10);
+  --divider-alt:   rgba(91,33,182,0.08);
+  --divider-faint: rgba(91,33,182,0.06);
+
+  --cta-bg:           var(--brand-violet);
+  --cta-text:         var(--offwhite);
+  --cta-hover-shadow: rgba(91,33,182,0.25);
+  --cta-tap-shadow:   rgba(91,33,182,0.15);
+
+  --nav-text:         var(--void);
+  --nav-link:         var(--slate-mid);
+  --nav-bg-solid:     rgba(237,233,254,0.95);
+  --nav-text-solid:   var(--void);
+  --nav-link-solid:   var(--slate-mid);
+  --nav-border-solid: rgba(91,33,182,0.10);
+
+  --input-border:     rgba(91,33,182,0.15);
+  --input-text:       var(--void);
+
+  --dash-shadow:    0 28px 56px rgba(0,0,0,0.10);
+  --dash-outline:   rgba(91,33,182,0.06);
+  --dash-highlight: rgba(255,255,255,0.02);
+  --dash-border:    rgba(91,33,182,0.15);
+
+  --chrome-bg:      #F0EDF8;
+  --chrome-bar:     rgba(0,0,0,0.04);
+  --chrome-dot-1:   #D4C8EC;
+  --chrome-dot-2:   #C4B8DC;
+  --chrome-dot-3:   #A78BFA;
+
+  --mock-bg:        var(--offwhite);
+  --mock-nav:       #F0EDF8;
+  --mock-card:      rgba(91,33,182,0.04);
+  --mock-bar:       rgba(0,0,0,0.10);
+  --mock-bar-faint: rgba(0,0,0,0.04);
+  --mock-border:    rgba(91,33,182,0.08);
+  --mock-btn-fill:  rgba(91,33,182,0.15);
+  --mock-btn-border: rgba(91,33,182,0.2);
+  --mock-btn-ghost: rgba(91,33,182,0.12);
+  --mock-card-border: rgba(91,33,182,0.06);
+  --mock-icon-bg:   rgba(91,33,182,0.06);
+  --mock-gradient:  linear-gradient(135deg, #C4B8DC, #8B5CF6);
+  --mock-dot:       rgba(139,92,246,0.55);
+  --mock-glow:      var(--brand-violet);
+  --mock-glow-shadow: rgba(91,33,182,0.4);
+
+  --pool-inner:     rgba(139,92,246,0.12);
+  --pool-mid:       rgba(91,33,182,0.04);
+  --pool-bg-inner:  rgba(124,58,237,0.07);
+  --pool-bg-mid:    rgba(91,33,182,0.03);
+
+  --badge-bg:       rgba(91,33,182,0.1);
+  --badge-border:   rgba(91,33,182,0.15);
+  --phase-divider:  rgba(91,33,182,0.2);
+}
+
+@theme inline {
+  --color-background: var(--offwhite);
+  --color-foreground: var(--void);
+  --font-sans:    var(--font-figtree), sans-serif;
+  --font-heading: var(--font-figtree), sans-serif;
+}
+
+/* ── Base ──────────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--heading-alt);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── Theme transition (only on explicit toggle, not on load) ── */
+html.theme-transition,
+html.theme-transition *,
+html.theme-transition *::before,
+html.theme-transition *::after {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease !important;
+}
+
+/* ── Mark Animations ───────────────────────────────────────── */
+
+/* Stack Build: each slab sets --z to its resting translateZ value  */
+@keyframes cs-slab-in {
+  from {
+    transform: translateZ(var(--z)) translateY(60px);
+    opacity: 0;
+  }
+  to {
+    transform: translateZ(var(--z)) translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Breathe: each slab sets --z to its resting Z; rises by 14px at 50% */
+@keyframes cs-breathe {
+  0%, 100% { transform: translateZ(var(--z)); }
+  50%       { transform: translateZ(calc(var(--z) + 14px)); }
+}
+
+/* Wordmark fade-slide in */
+@keyframes cs-wm-in {
+  from { opacity: 0; transform: translateX(8px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+/* ── Service row hover — left border reveal (pointer devices only) ── */
+@media (hover: hover) {
+  .cs-service-row {
+    border-left: 2px solid transparent;
+    padding-left: 20px;
+    margin-left: -22px; /* compensate so content stays aligned */
+    transition: border-left-color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .cs-service-row:hover {
+    border-left-color: var(--brand-violet);
+  }
+}
+
+/* Touch feedback for service rows */
+.cs-service-row:active {
+  opacity: 0.75;
+  transition: opacity 0.1s;
+}
+
+/* ── Prevent 300ms tap delay on all interactive elements ────── */
+a, button, input, textarea, select, label {
+  touch-action: manipulation;
+}
+
+/* ── Reduced Motion ─────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  /* Disable Stack Build — show slabs at final state immediately */
+  @keyframes cs-slab-in {
+    from { transform: translateZ(var(--z)) translateY(0); opacity: 1; }
+    to   { transform: translateZ(var(--z)) translateY(0); opacity: 1; }
+  }
+  /* Disable Breathe — hold at rest position */
+  @keyframes cs-breathe {
+    0%, 100% { transform: translateZ(var(--z)); }
+    50%       { transform: translateZ(var(--z)); }
+  }
+}
