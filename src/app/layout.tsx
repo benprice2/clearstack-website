@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Figtree } from "next/font/google";
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
 
 const figtree = Figtree({
@@ -64,7 +66,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: localBusinessSchema }}
         />
       </head>
-      <body className="min-h-screen font-sans">{children}</body>
+      <body className="min-h-screen font-sans">{children}<Analytics /><SpeedInsights /></body>
     </html>
   );
 }
