@@ -117,7 +117,7 @@ export function HeroDashboard() {
       aria-hidden="true"
       style={{
         width: '100%',
-        maxWidth: 400,
+        maxWidth: 560,
         borderRadius: 12,
         overflow: 'hidden',
         border: '1px solid var(--dash-border)',
@@ -136,7 +136,7 @@ export function HeroDashboard() {
       }}
     >
 
-      {/* ── Cursor light pool ──────────────────────────────────── */}
+      {/* Cursor light pool */}
       <div
         ref={lightRef}
         aria-hidden="true"
@@ -149,21 +149,21 @@ export function HeroDashboard() {
         }}
       />
 
-      {/* ── Browser chrome ─────────────────────────────────────── */}
+      {/* Browser chrome */}
       <div style={{
-        backgroundColor: 'var(--chrome-bg)',
+        backgroundColor: 'var(--hero-chrome-bg)',
         borderBottom: '1px solid var(--mock-border)',
         padding: '9px 14px',
         display: 'flex', alignItems: 'center', gap: 10,
       }}>
         <div style={{ display: 'flex', gap: 5 }}>
-          {(['var(--chrome-dot-1)','var(--chrome-dot-2)','var(--chrome-dot-3)'] as const).map((c, i) => (
+          {(['var(--hero-chrome-dot-1)','var(--hero-chrome-dot-2)','var(--hero-chrome-dot-3)'] as const).map((c, i) => (
             <div key={i} style={{ width: 9, height: 9, borderRadius: '50%', backgroundColor: c }} />
           ))}
         </div>
         <div style={{
           flex: 1, height: 20, borderRadius: 4, maxWidth: 200,
-          backgroundColor: 'var(--chrome-bar)',
+          backgroundColor: 'var(--hero-chrome-bar)',
           display: 'flex', alignItems: 'center', paddingLeft: 8, gap: 6,
         }}>
           <div style={{ width: 5, height: 5, borderRadius: '50%', backgroundColor: 'var(--mock-dot)' }} />
@@ -171,7 +171,7 @@ export function HeroDashboard() {
         </div>
       </div>
 
-      {/* ── Website interior ───────────────────────────────────── */}
+      {/* Website interior */}
       <div style={{ backgroundColor: 'var(--mock-bg)' }}>
 
         {/* Site nav */}
@@ -209,7 +209,7 @@ export function HeroDashboard() {
             <Bar w={60} h={4} />
           </div>
 
-          {/* Headline — two chunky lines */}
+          {/* Headline */}
           <div style={{ display: 'flex', flexDirection: 'column', gap: 6, marginBottom: 14 }}>
             <Bar w="88%" h={14} />
             <Bar w="68%" h={14} />
@@ -241,7 +241,6 @@ export function HeroDashboard() {
               padding: '10px 10px 12px',
               display: 'flex', flexDirection: 'column', gap: 6,
             }}>
-              {/* Icon placeholder */}
               <div style={{
                 width: 20, height: 20, borderRadius: 4,
                 background: i === 0

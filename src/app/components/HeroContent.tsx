@@ -74,7 +74,7 @@ export function HeroContent() {
       </motion.p>
 
       {/* CTA — variants propagate from anchor to arrow */}
-      <motion.div className="text-center md:text-left" {...fadeUp(DELAYS.cta, !!reduced)}>
+      <motion.div className="flex items-center gap-6 flex-wrap md:justify-start justify-center" {...fadeUp(DELAYS.cta, !!reduced)}>
         <motion.a
           href="#contact"
           className="inline-block text-[13px] font-semibold px-6 py-3.5 rounded-md no-underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-(--accent)"
@@ -91,6 +91,15 @@ export function HeroContent() {
         >
           Start the conversation
         </motion.a>
+        <a
+          href="#work"
+          className="text-[13px] font-semibold no-underline transition-colors duration-200"
+          style={{ color: 'var(--body)', borderBottom: '1px solid var(--divider)' }}
+          onMouseEnter={e => { e.currentTarget.style.color = 'var(--heading)'; e.currentTarget.style.borderBottomColor = 'var(--accent)' }}
+          onMouseLeave={e => { e.currentTarget.style.color = 'var(--body)'; e.currentTarget.style.borderBottomColor = 'var(--divider)' }}
+        >
+          See what we&apos;ve built
+        </a>
       </motion.div>
     </div>
   )

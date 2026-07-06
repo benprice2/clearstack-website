@@ -11,6 +11,7 @@ export function HeroDepthField() {
   const sceneRef = useRef<HTMLDivElement>(null)
   const lightRef = useRef<HTMLDivElement>(null)
   const rafRef = useRef<number>(0)
+  const posRef = useRef({ tx: 0, ty: 0, sx: 0, sy: 0, active: false })
 
   useEffect(() => {
     if (reduced) return
@@ -24,37 +25,49 @@ export function HeroDepthField() {
     const hero = document.getElementById('hero')
     if (!hero) return
 
+    const pos = posRef.current
     const EASE_MOVE = 'transform 0.15s ease-out'
     const EASE_LEAVE = 'transform 0.9s cubic-bezier(0.22,1,0.36,1)'
 
     const onMove = (e: MouseEvent) => {
-      cancelAnimationFrame(rafRef.current)
-      rafRef.current = requestAnimationFrame(() => {
-        const rect = hero.getBoundingClientRect()
-        const nx = ((e.clientX - rect.left) / rect.width - 0.5) * 2
-        const ny = ((e.clientY - rect.top) / rect.height - 0.5) * 2
+      const rect = hero.getBoundingClientRect()
+      const nx = ((e.clientX - rect.left) / rect.width - 0.5) * 2
+      const ny = ((e.clientY - rect.top) / rect.height - 0.5) * 2
 
-        const tiltX = -ny * TILT_MAX_X
-        const tiltY = nx * TILT_MAX_Y
-        scene.style.transition = EASE_MOVE
-        scene.style.transform =
-          `perspective(1400px) rotateX(${tiltX}deg) rotateY(${tiltY}deg)`
+      const tiltX = -ny * TILT_MAX_X
+      const tiltY = nx * TILT_MAX_Y
+      scene.style.transition = EASE_MOVE
+      scene.style.transform =
+        `perspective(1400px) rotateX(${tiltX}deg) rotateY(${tiltY}deg)`
 
-        const sceneRect = scene.getBoundingClientRect()
-        const lx = e.clientX - sceneRect.left
-        const ly = e.clientY - sceneRect.top
-        light.style.opacity = '1'
-        light.style.background =
-          `radial-gradient(ellipse 320px 320px at ${lx}px ${ly}px, var(--pool-bg-inner) 0%, var(--pool-bg-mid) 50%, transparent 72%)`
-      })
+      pos.tx = e.clientX - scene.getBoundingClientRect().left
+      pos.ty = e.clientY - scene.getBoundingClientRect().top
+      if (!pos.active) {
+        pos.sx = pos.tx
+        pos.sy = pos.ty
+      }
+      pos.active = true
+      light.style.opacity = '1'
     }
 
     const onLeave = () => {
-      cancelAnimationFrame(rafRef.current)
       scene.style.transition = EASE_LEAVE
       scene.style.transform = 'perspective(1400px) rotateX(0deg) rotateY(0deg)'
+      pos.active = false
       light.style.opacity = '0'
     }
+
+    function frame() {
+      if (pos.active && light) {
+        pos.sx += (pos.tx - pos.sx) * 0.08
+        pos.sy += (pos.ty - pos.sy) * 0.08
+        light.style.background =
+          `radial-gradient(ellipse 320px 320px at ${pos.sx}px ${pos.sy}px, var(--pool-bg-inner) 0%, var(--pool-bg-mid) 50%, transparent 72%)`
+      }
+      rafRef.current = requestAnimationFrame(frame)
+    }
+
+    rafRef.current = requestAnimationFrame(frame)
 
     hero.addEventListener('mousemove', onMove)
     hero.addEventListener('mouseleave', onLeave)

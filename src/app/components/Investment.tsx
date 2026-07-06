@@ -54,7 +54,7 @@ const TIERS = [
 
 export function Investment() {
   return (
-    <div className="max-w-6xl mx-auto px-6 sm:px-8">
+    <div className="max-w-[90rem] mx-auto px-8 sm:px-12 lg:px-16">
       <AnimateIn>
         <p
           className="text-[10px] font-bold tracking-[0.18em] uppercase mb-4"

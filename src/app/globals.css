@@ -56,10 +56,10 @@
   /* Navigation */
   --nav-text:         var(--offwhite);
   --nav-link:         rgba(237,233,254,0.65);
-  --nav-bg-solid:     rgba(248,247,255,0.95);
-  --nav-text-solid:   var(--void);
-  --nav-link-solid:   var(--slate-mid);
-  --nav-border-solid: rgba(91,33,182,0.12);
+  --nav-bg-solid:     rgba(13,10,26,0.92);
+  --nav-text-solid:   var(--offwhite);
+  --nav-link-solid:   rgba(237,233,254,0.6);
+  --nav-border-solid: rgba(196,184,220,0.12);
 
   /* Form */
   --input-border:     rgba(196,184,220,0.15);
@@ -71,12 +71,20 @@
   --dash-highlight: rgba(255,255,255,0.06);
   --dash-border:    rgba(196,184,220,0.22);
 
-  /* Browser chrome (mockups) */
-  --chrome-bg:      #0E0922;
-  --chrome-bar:     rgba(255,255,255,0.08);
-  --chrome-dot-1:   #3B1278;
-  --chrome-dot-2:   #5B21B6;
-  --chrome-dot-3:   #7C3AED;
+  /* Browser chrome (work section — inverted) */
+  --chrome-bg:      #F0EDF8;
+  --chrome-bar:     rgba(91,33,182,0.08);
+  --chrome-dot-1:   #D4C8EC;
+  --chrome-dot-2:   #C4B8DC;
+  --chrome-dot-3:   #A78BFA;
+  --chrome-url:     var(--void);
+
+  /* Hero dashboard chrome (matches mode) */
+  --hero-chrome-bg:    #0E0922;
+  --hero-chrome-bar:   rgba(255,255,255,0.08);
+  --hero-chrome-dot-1: #3B1278;
+  --hero-chrome-dot-2: #5B21B6;
+  --hero-chrome-dot-3: #7C3AED;
 
   /* Dashboard mockup interior */
   --mock-bg:        #0D0A1A;
@@ -153,11 +161,18 @@
   --dash-highlight: rgba(255,255,255,0.02);
   --dash-border:    rgba(91,33,182,0.15);
 
-  --chrome-bg:      #F0EDF8;
-  --chrome-bar:     rgba(0,0,0,0.04);
-  --chrome-dot-1:   #D4C8EC;
-  --chrome-dot-2:   #C4B8DC;
-  --chrome-dot-3:   #A78BFA;
+  --chrome-bg:      #0E0922;
+  --chrome-bar:     rgba(255,255,255,0.08);
+  --chrome-dot-1:   #3B1278;
+  --chrome-dot-2:   #5B21B6;
+  --chrome-dot-3:   #7C3AED;
+  --chrome-url:     var(--offwhite);
+
+  --hero-chrome-bg:    #F0EDF8;
+  --hero-chrome-bar:   rgba(91,33,182,0.08);
+  --hero-chrome-dot-1: #D4C8EC;
+  --hero-chrome-dot-2: #C4B8DC;
+  --hero-chrome-dot-3: #A78BFA;
 
   --mock-bg:        var(--offwhite);
   --mock-nav:       #F0EDF8;
@@ -184,6 +199,7 @@
   --badge-border:   rgba(91,33,182,0.15);
   --phase-divider:  rgba(91,33,182,0.2);
 }
+
 
 @theme inline {
   --color-background: var(--offwhite);
@@ -258,6 +274,7 @@ html.theme-transition *::after {
 a, button, input, textarea, select, label {
   touch-action: manipulation;
 }
+
 
 /* ── Reduced Motion ─────────────────────────────────────────── */
 @media (prefers-reduced-motion: reduce) {

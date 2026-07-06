@@ -498,9 +498,10 @@ export function ProcessScroll() {
   const barProgress = mode === 'phase' ? (reducedMotion ? 1 : Math.min(1, elapsed / INTERVAL)) : 0
 
   return (
+    <div className="max-w-[90rem] mx-auto px-8 sm:px-12 lg:px-16">
     <div className="grid grid-cols-1 md:grid-cols-[2fr_1fr]">
       {/* Left: label + tabs + blurb */}
-      <div className="py-12 md:py-16 px-6 sm:px-8 md:pl-[max(1.5rem,calc((100vw-72rem)/2+1.5rem))] md:pr-10">
+      <div className="py-12 md:py-16">
 
         <h2
           className="text-[10px] font-bold tracking-[0.18em] uppercase mb-4"
@@ -612,6 +613,7 @@ export function ProcessScroll() {
           {renderVisual()}
         </div>
       </div>
+    </div>
     </div>
   )
 }

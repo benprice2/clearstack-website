@@ -1,0 +1,29 @@
+# ClearStack
+
+> Custom websites and web applications for NZ businesses. Designed to work, built to grow.
+
+ClearStack is a web design and development studio based in Auckland, New Zealand. We build custom websites and SaaS applications for small and medium businesses. No templates, no page builders — just clean, fast, purpose-built software.
+
+## Services
+
+- **Website Design & Development**: Custom-designed, research-driven websites built with modern frameworks (React, Next.js). Not Squarespace themes with your logo swapped in.
+- **SaaS & Web Applications**: Custom web applications, internal tools, and client portals built to your exact workflow.
+
+## Process
+
+1. **Understand**: We learn your business before touching a screen.
+2. **Plan**: Structure, user flows, and technology decisions locked in before code is written.
+3. **Build**: Design and development move together with weekly progress.
+4. **Grow**: Launch is just the starting line. We track, refine, and add capability as your business evolves.
+
+## Investment
+
+- **Landing Page**: From $1,200 NZD — single-purpose page designed to convert.
+- **Business Website**: From $3,500 NZD — up to 6 pages, CMS, SEO, analytics, 3 months post-launch support.
+- **Web Application**: Custom scoped — full-stack React/Next.js, auth, API integrations, documentation.
+
+## Contact
+
+- Website: https://clearstack.co.nz
+- Email: hello@clearstack.co.nz
+- Location: Auckland, New Zealand

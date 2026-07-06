@@ -6,11 +6,11 @@ import { AnimateIn } from './AnimateIn'
 const FAQS = [
   {
     q: 'How much does a website cost?',
-    a: 'Our productized website builds start from $4,500 + GST. That covers discovery, custom design, development, CMS setup, and launch. The final price depends on the number of pages and any specific functionality you need. We scope everything upfront so there are no surprises.',
+    a: 'A landing page starts from $1,200 NZD that\u2019s a single custom-designed page built to convert, with a contact form and basic SEO. A full business website starts from $3,500 NZD and includes up to six pages, CMS integration, SEO foundations, analytics, and three months of post-launch changes. Web applications are scoped and quoted per project. Every project is priced upfront so there are no surprises.',
   },
   {
     q: 'How long does a website take to build?',
-    a: 'Most website projects take 4 to 8 weeks from kickoff to launch. The timeline depends on how quickly we can move through the discovery and feedback stages together. We don\u2019t rush the research phase because getting the foundations right saves time overall.',
+    a: 'A landing page typically takes 1 to 2 weeks from kickoff to launch. A multi-page business website takes 4 to 8 weeks depending on the number of pages and how quickly we move through discovery and feedback together. We don\u2019t rush the research phase because getting the foundations right saves time overall.',
   },
   {
     q: 'Why not just use Squarespace or Wix?',
@@ -117,7 +117,7 @@ export function FAQ() {
   return (
     <>
       <FAQSchema />
-      <div className="max-w-6xl mx-auto px-6 sm:px-8">
+      <div className="max-w-[90rem] mx-auto px-8 sm:px-12 lg:px-16">
         <AnimateIn>
           <p
             className="text-[10px] font-bold tracking-[0.18em] uppercase mb-4"

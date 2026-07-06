@@ -15,8 +15,7 @@ export function Nav() {
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
-  // Mark scheme: when scrolled or in light theme, use 'light' (dark bg marks)
-  const markScheme = scrolled || theme === 'light' ? 'light' : 'dark'
+  const markScheme = theme === 'light' ? 'light' : 'dark'
 
   return (
     <nav
@@ -27,7 +26,7 @@ export function Nav() {
         borderBottom: scrolled ? '1px solid var(--nav-border-solid)' : '1px solid transparent',
       }}
     >
-      <div className="max-w-6xl mx-auto px-6 sm:px-8 h-15 flex items-center justify-between">
+      <div className="max-w-[90rem] mx-auto px-8 sm:px-12 lg:px-16 h-15 flex items-center justify-between">
 
         {/* Wordmark + mark lockup */}
         <a

@@ -44,11 +44,10 @@ export default function Home() {
         className="relative z-10 flex flex-col min-h-svh md:min-h-screen pt-15 overflow-hidden"
         style={{ backgroundColor: 'var(--bg-primary)' }}
       >
-        {/* Cursor-reactive depth field — desktop enhancement only */}
         <HeroDepthField />
 
-        <div className="flex-1 flex items-center max-w-6xl mx-auto px-6 sm:px-8 w-full">
-          <div className="flex items-center gap-10 xl:gap-14 w-full pb-12 sm:pb-8">
+        <div className="flex-1 flex items-center max-w-[90rem] mx-auto px-8 sm:px-12 lg:px-16 w-full">
+          <div className="flex items-center gap-10 xl:gap-14 w-full">
 
             {/* Copy column — 2/3 width */}
             <div className="flex-2 min-w-0">
@@ -62,20 +61,6 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Bottom rule with location tag */}
-        <div className="absolute bottom-0 left-0 right-0 px-6 sm:px-8 pb-6 sm:pb-8">
-          <div
-            className="pt-5"
-            style={{ borderTop: '1px solid var(--divider)' }}
-          >
-            <span
-              className="text-[10px] font-bold tracking-[0.18em] uppercase"
-              style={{ color: 'var(--label)' }}
-            >
-              Website Design & Development · SaaS Applications · Auckland, NZ
-            </span>
-          </div>
-        </div>
       </section>
 
       {/* ════════════════════════════════════════════════
@@ -87,7 +72,7 @@ export default function Home() {
         className="py-16 md:py-24"
         style={{ backgroundColor: 'var(--bg-secondary)' }}
       >
-        <div className="max-w-6xl mx-auto px-6 sm:px-8">
+        <div className="max-w-[90rem] mx-auto px-8 sm:px-12 lg:px-16">
           <AnimateIn><Label>Our work</Label></AnimateIn>
 
           <AnimateIn delay={0.1}>
@@ -120,10 +105,12 @@ export default function Home() {
                       <div className="w-2.5 h-2.5 rounded-full" style={{ backgroundColor: 'var(--chrome-dot-3)' }} />
                     </div>
                     <div
-                      className="flex-1 h-5 rounded"
+                      className="flex-1 h-5 rounded flex items-center px-2"
                       style={{ backgroundColor: 'var(--chrome-bar)', maxWidth: 220 }}
                       aria-hidden="true"
-                    />
+                    >
+                      <span className="text-[9px] tracking-wide opacity-80" style={{ color: 'var(--chrome-url)' }}>www.smarine.co.nz</span>
+                    </div>
                   </div>
                   {/* Screenshot */}
                   <Image
@@ -177,10 +164,12 @@ export default function Home() {
                       <div className="w-2.5 h-2.5 rounded-full" style={{ backgroundColor: 'var(--chrome-dot-3)' }} />
                     </div>
                     <div
-                      className="flex-1 h-5 rounded"
+                      className="flex-1 h-5 rounded flex items-center px-2"
                       style={{ backgroundColor: 'var(--chrome-bar)', maxWidth: 220 }}
                       aria-hidden="true"
-                    />
+                    >
+                      <span className="text-[9px] tracking-wide opacity-80" style={{ color: 'var(--chrome-url)' }}>www.malmomarine.co.nz</span>
+                    </div>
                   </div>
                   {/* Screenshot */}
                   <Image
@@ -241,7 +230,7 @@ export default function Home() {
           paddingBottom: 'clamp(56px, 8vw, 96px)',
         }}
       >
-        <div className="max-w-6xl mx-auto px-6 sm:px-8">
+        <div className="max-w-[90rem] mx-auto px-8 sm:px-12 lg:px-16">
           <AnimateIn><Label primary>What we build</Label></AnimateIn>
 
           <AnimateIn delay={0.1}>
@@ -362,7 +351,7 @@ export default function Home() {
         }}
       >
         <div
-          className="max-w-6xl mx-auto px-6 sm:px-8"
+          className="max-w-[90rem] mx-auto px-8 sm:px-12 lg:px-16"
         >
           {/* CTA header */}
           <AnimateIn className="text-center mb-10 md:mb-12">
