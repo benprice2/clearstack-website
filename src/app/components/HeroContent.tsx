@@ -58,8 +58,8 @@ export function HeroContent() {
         }}
         {...slideUp(DELAYS.heading, !!reduced)}
       >
-        <span style={{ color: 'var(--heading)' }}>Build it right,</span><br />
-        <span style={{ color: 'var(--accent)' }}>then automate it.</span>
+        <span style={{ color: 'var(--heading)' }}>Designed to work,</span><br />
+        <span style={{ color: 'var(--accent)' }}>built to grow.</span>
       </motion.h1>
 
       {/* Subhead */}
@@ -68,10 +68,9 @@ export function HeroContent() {
         style={{ color: 'var(--body)' }}
         {...fadeUp(DELAYS.sub, !!reduced)}
       >
-        We build custom websites and SaaS applications for NZ
-        businesses. Designed for how you actually work, not adapted
-        from a template. And built so that when you&apos;re ready to
-        automate, it&apos;s a step forward, not a rebuild.
+        We design and build custom websites and web applications
+        for NZ businesses. No templates, no page builders. Just
+        clean, fast, purpose-built software.
       </motion.p>
 
       {/* CTA — variants propagate from anchor to arrow */}

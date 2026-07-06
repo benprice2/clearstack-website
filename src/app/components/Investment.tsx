@@ -36,14 +36,14 @@ const TIERS = [
     popular: true,
   },
   {
-    name: 'Web App or AI Tool',
+    name: 'Web Application',
     description:
-      'Custom web applications, internal tools, client portals, or AI-powered automation agents.',
+      'Custom web applications, internal tools, and client portals built to your exact workflow.',
     features: [
       'Requirements & scoping session',
       'Full-stack React / Next.js',
       'API & third-party integrations',
-      'AI agent / workflow automation',
+      'Auth, roles & permissions',
       'Documentation & handover',
     ],
     price: 'Custom',

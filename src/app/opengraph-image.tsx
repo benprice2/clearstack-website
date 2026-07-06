@@ -149,8 +149,8 @@ export default async function Image() {
               flexDirection: 'column',
             }}
           >
-            <span style={{ color: '#F8F7FF' }}>Build it right,</span>
-            <span style={{ color: '#8B5CF6' }}>then automate it.</span>
+            <span style={{ color: '#F8F7FF' }}>Designed to work,</span>
+            <span style={{ color: '#8B5CF6' }}>built to grow.</span>
           </div>
 
           {/* Descriptor */}

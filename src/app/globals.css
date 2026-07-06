@@ -19,9 +19,9 @@
   /* ── Theme Role Tokens (dark default) ──────────────────── */
 
   /* Surfaces */
-  --bg-primary:    var(--void);       /* Hero, Work, Why, Contact */
-  --bg-secondary:  var(--mist);       /* Services */
-  --bg-tertiary:   var(--mist);       /* Process */
+  --bg-primary:    var(--void);       /* Hero, Services, Contact */
+  --bg-secondary:  #13102A;           /* Work */
+  --bg-tertiary:   #110E24;           /* Process, FAQ */
   --bg-card:       #1C1638;           /* Cards on primary surfaces */
 
   /* Text on primary surfaces */
@@ -32,19 +32,19 @@
   --body-vfaint:   rgba(237,233,254,0.35);
   --label:         var(--slate-light);
 
-  /* Text on secondary/tertiary surfaces (stable across themes) */
-  --heading-alt:   var(--void);
-  --body-alt:      var(--slate);
-  --label-alt:     var(--slate-mid);
+  /* Text on secondary/tertiary surfaces */
+  --heading-alt:   var(--offwhite);
+  --body-alt:      rgba(237,233,254,0.6);
+  --label-alt:     var(--slate-light);
 
   /* Accents */
   --accent:        var(--violet-glow);    /* On primary surfaces */
-  --accent-alt:    var(--brand-violet);   /* On secondary surfaces */
+  --accent-alt:    var(--violet-glow);    /* On secondary surfaces */
   --text-brand:    var(--violet-light);   /* Branded list text */
 
   /* Borders */
   --divider:       rgba(196,184,220,0.15);
-  --divider-alt:   rgba(91,33,182,0.12);
+  --divider-alt:   rgba(196,184,220,0.12);
   --divider-faint: rgba(196,184,220,0.07);
 
   /* CTA button */
@@ -120,6 +120,10 @@
   --body-faint:    #6B7280;
   --body-vfaint:   var(--slate-light);
   --label:         var(--slate-mid);
+
+  --heading-alt:   var(--void);
+  --body-alt:      var(--slate);
+  --label-alt:     var(--slate-mid);
 
   --accent:        var(--brand-violet);
   --accent-alt:    var(--brand-violet);

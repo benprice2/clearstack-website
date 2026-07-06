@@ -286,7 +286,7 @@ export default function Home() {
             </AnimateIn>
 
             {/* Row 2 — SaaS & Apps */}
-            <AnimateIn delay={0.18} style={{ borderBottom: '1px solid var(--divider)' }}>
+            <AnimateIn delay={0.18}>
               <div className="cs-service-row flex items-start gap-6 md:gap-8 py-8 md:py-10">
                 <div className="shrink-0 pt-1" aria-hidden="true">
                   <ThemedMark size={22} variant="static" />
@@ -311,31 +311,6 @@ export default function Home() {
               </div>
             </AnimateIn>
 
-            {/* Row 3 — Architecture principle */}
-            <AnimateIn delay={0.36}>
-              <div className="cs-service-row flex items-start gap-6 md:gap-8 py-8 md:py-10">
-                <div className="shrink-0 pt-1" aria-hidden="true">
-                  <ThemedMark size={18} variant="static" />
-                </div>
-                <div>
-                  <h3
-                    className="text-[15px] md:text-[16px] font-bold tracking-[-0.01em] mb-2"
-                    style={{ color: 'var(--label)' }}
-                  >
-                    Built Automation-Ready
-                  </h3>
-                  <p
-                    className="text-[13px] md:text-[14px] leading-[1.75] max-w-2xl"
-                    style={{ color: 'var(--body-mid)' }}
-                  >
-                    Everything we build is architected for what comes next. When
-                    your cashflow supports it and the foundation is right, adding
-                    automation isn&apos;t a rebuild, it&apos;s the natural next step. That&apos;s
-                    what &ldquo;build it right, then automate it&rdquo; means in practice.
-                  </p>
-                </div>
-              </div>
-            </AnimateIn>
           </div>
         </div>
       </section>
@@ -415,8 +390,8 @@ export default function Home() {
             className="mt-12 md:mt-16 pt-8"
             style={{ borderTop: '1px solid var(--divider)' }}
           >
-            <div className="flex items-center justify-between text-[12px]" style={{ color: 'var(--body-faint)' }}>
-              <div className="flex items-center gap-2.5 flex-1">
+            <div className="flex flex-col gap-5 sm:flex-row sm:items-center sm:justify-between text-[12px]" style={{ color: 'var(--body-faint)' }}>
+              <div className="flex items-center gap-2.5">
                 <ThemedMark size={14} variant="static" />
                 <span
                   className="font-bold text-[13px] tracking-[-0.02em]"
@@ -431,10 +406,12 @@ export default function Home() {
                   Auckland · NZ
                 </span>
               </div>
-              <p className="text-center">&copy; {new Date().getFullYear()} ClearStack. All rights reserved.</p>
-              <div className="flex gap-5 flex-1 justify-end">
-                <a href="/privacy" className="no-underline transition-colors duration-200 hover:text-white" style={{ color: 'var(--body-faint)' }}>Privacy</a>
-                <a href="/terms" className="no-underline transition-colors duration-200 hover:text-white" style={{ color: 'var(--body-faint)' }}>Terms</a>
+              <div className="flex items-center justify-between gap-5 sm:gap-6">
+                <p>&copy; {new Date().getFullYear()} ClearStack</p>
+                <div className="flex gap-5">
+                  <a href="/privacy" className="no-underline transition-colors duration-200 hover:text-white" style={{ color: 'var(--body-faint)' }}>Privacy</a>
+                  <a href="/terms" className="no-underline transition-colors duration-200 hover:text-white" style={{ color: 'var(--body-faint)' }}>Terms</a>
+                </div>
               </div>
             </div>
           </footer>

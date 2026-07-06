@@ -3,6 +3,7 @@
 import { useRef, useState, useEffect, useCallback } from 'react'
 import { useReducedMotion } from 'framer-motion'
 import { StackMark, getSlabGeometry } from './StackMark'
+import { useTheme } from './useTheme'
 
 const PHASES = [
   {
@@ -21,9 +22,9 @@ const PHASES = [
       'Design and development move together. You see real progress weekly, not a big reveal at the end. Every component is built to production standards from day one.',
   },
   {
-    title: 'Automate',
+    title: 'Grow',
     blurb:
-      'When the foundation is solid and the timing is right, we layer in automation that works. Email flows, data sync, reporting. The system grows with your business.',
+      'Launch is just the starting line. We track what\u2019s working, refine what isn\u2019t, and add capability when the timing is right. Your site or app evolves with your business.',
   },
 ]
 
@@ -157,7 +158,7 @@ function getBuildLayerStyles(
   }) as [React.CSSProperties, React.CSSProperties, React.CSSProperties]
 }
 
-function getAutomateLayerStyles(
+function getGrowLayerStyles(
   elapsed: number,
   reduced: boolean
 ): [React.CSSProperties, React.CSSProperties, React.CSSProperties] {
@@ -340,24 +341,23 @@ function TransitionPlanToBuild({ elapsed, reduced }: { elapsed: number; reduced:
 
 
 /**
- * Automate → Understand: Squares flatten and scatter to Understand's start positions.
+ * Grow → Understand: StackMark fades out, scattered squares fade in.
  */
-function TransitionAutomateToUnderstand({ elapsed, reduced }: { elapsed: number; reduced: boolean }) {
+function TransitionGrowToUnderstand({ elapsed, reduced, scheme }: { elapsed: number; reduced: boolean; scheme: 'dark' | 'light' }) {
   const t = reduced ? 1 : Math.min(1, elapsed / TRANSITION_DURATION)
-  // Crossfade: Automate fades out, Understand fades in
-  const fadeOut = 1 - easeInOut(Math.min(1, t / 0.5)) // first half
-  const fadeIn = easeInOut(Math.max(0, (t - 0.4) / 0.6)) // second half, slight overlap
+  const fadeOut = 1 - easeInOut(Math.min(1, t / 0.5))
+  const fadeIn = easeInOut(Math.max(0, (t - 0.4) / 0.6))
 
   return (
     <div className="relative w-full h-full">
-      {/* Automate fading out */}
+      {/* Grow fading out */}
       <div className="absolute inset-0 flex items-center justify-center" style={{ opacity: fadeOut }}>
         <div style={{ marginTop: -Math.round(MARK_SIZE * 0.45) / 2 }}>
           <StackMark
             size={MARK_SIZE}
             variant="static"
-            scheme="light"
-            layerStyles={getAutomateLayerStyles(10000, true)}
+            scheme={scheme}
+            layerStyles={getGrowLayerStyles(10000, true)}
             containerTransform="rotateX(52deg) rotateZ(45deg)"
           />
         </div>
@@ -380,11 +380,13 @@ export function ProcessScroll() {
   const timerRef = useRef<ReturnType<typeof setInterval> | null>(null)
   const startRef = useRef(Date.now())
   const reducedMotion = useReducedMotion()
+  const { theme } = useTheme()
+  const markScheme = theme === 'light' ? 'light' : 'dark'
 
   const startTransition = useCallback((from: number, to: number) => {
     setTransFrom(from)
     setActive(to)
-    // Build→Automate: skip transition, go straight to phase
+    // Build→Grow: skip transition, go straight to phase
     if (from === 2 && to === 3) {
       setMode('phase')
     } else {
@@ -451,7 +453,7 @@ export function ProcessScroll() {
             <StackMark
               size={MARK_SIZE}
               variant="static"
-              scheme="light"
+              scheme={markScheme}
               layerStyles={getBuildLayerStyles(phaseElapsed, reduced)}
               containerTransform="rotateX(52deg) rotateZ(45deg)"
             />
@@ -463,8 +465,8 @@ export function ProcessScroll() {
             <StackMark
               size={MARK_SIZE}
               variant="static"
-              scheme="light"
-              layerStyles={getAutomateLayerStyles(phaseElapsed, reduced)}
+              scheme={markScheme}
+              layerStyles={getGrowLayerStyles(phaseElapsed, reduced)}
               containerTransform="rotateX(52deg) rotateZ(45deg)"
             />
           </div>
@@ -482,10 +484,10 @@ export function ProcessScroll() {
       case '1-2':
         return <TransitionPlanToBuild elapsed={currentElapsed} reduced={reduced} />
       case '2-3':
-        // Skip transition — Automate's own fan-apart serves as the visual bridge
+        // Skip transition — Grow's own fan-apart serves as the visual bridge
         return renderPhase(active, currentElapsed)
       case '3-0':
-        return <TransitionAutomateToUnderstand elapsed={currentElapsed} reduced={reduced} />
+        return <TransitionGrowToUnderstand elapsed={currentElapsed} reduced={reduced} scheme={markScheme} />
       default:
         // Non-sequential jumps: simple crossfade via opacity
         return renderPhase(active, 0)

@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(
     process.env.NEXT_PUBLIC_SITE_URL ?? "https://clearstack.co.nz"
   ),
-  title: "ClearStack | Build it right, then automate it",
+  title: "ClearStack | Designed to work, built to grow",
   description:
     "Custom websites and SaaS applications for NZ businesses. Designed for how you actually work, not adapted from a template.",
   alternates: {
